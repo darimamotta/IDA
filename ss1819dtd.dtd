@@ -1,0 +1,30 @@
+
+<!ELEMENT recipe (ingredient+,preparartion|reference?)>
+<!ATTLIST ingredient
+when PCDATA #REQUIRED
+>
+<!ELEMENT preparation (difficulty,reference*)>
+<!ELEMENT difficulty (#PCDATA)>
+<!ELEMENT reference (#PCDATA)>
+<!ATTLIST reference
+link #PCDATA #REQUIRED
+>
+
+
+
+a) Write a DTD against which the following recipe documents successfully validate.
+(Employ all operators of the content model.) The values of link must not contain spaces, and this attribute must be specified.
+b) Draw the complete document tree of the first XML document.
+c) Which modification makes the second XML document not well-formed anymore?
+Which modification makes it still well-formed, but not valid with regard to your DTD?
+<recipe>
+ <ingredient when=”summer season”>tomato</ingredient>
+ <ingredient>cheese</ingredient>
+ <preparation>
+ <difficulty>easy peasy</difficulty>
+ <reference link=”t4gfuw” />
+ </preparation>
+</recipe>
+<recipe>
+ <reference link=”iop35j” />
+</recipe>

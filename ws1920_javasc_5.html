@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> WS1718 Motta</title>
+<script type ="text/javascript">
+
+	
+function newColor(newcolor)
+{
+	//let newcolor="";
+
+if (document.getElementById("text").value=="")
+
+	{let newcolor="";
+		typecolor.innerHTML=("no");
+		return false;}
+
+else
+	{
+		//document.form.text.value;
+typecolor.innerHTML= newcolor;
+mydiv.style.border="solid 3px";
+mydiv.style.borderColor=newcolor;
+
+return true;} }
+
+
+
+</script>
+</head>
+<body>
+
+<form  name=form onsubmit="return newBorder(this)">
+<p id="mydiv"style="border:solid 3px none">
+
+ I have <span id=typecolor> no </span> border 
+</p>
+<br>
+<Input type="text" id="text" onChange="newColor(this.value)"> 
+<br>
+<Input type="button" id="submit" value="submit"> 
+</form> 
+
+</body>
+</html>

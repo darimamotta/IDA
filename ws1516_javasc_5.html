@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> ws1516 Motta</title>
+<script type ="text/javascript">
+function changeButton(text)
+{var but=document.getElementById("submit");
+if (text!="")
+{but.value="send"}
+else{
+but.value="Complete Form";}}
+function send (currentForm)
+{if(currentForm.button.value=="Send")
+return true;
+else return false;
+
+}
+</script>
+</head>
+<body>
+<form method="get" onsubmit="return send(this)" action="http://www.google.com"">
+<p1>
+<Input type="text" id="text" onkeyup="changeButtonText(this.value)"> 
+<br>
+
+<Input type="submit" id="submit" value="Complete Form"> 
+</p1>
+</form>
+</body>
+</html>

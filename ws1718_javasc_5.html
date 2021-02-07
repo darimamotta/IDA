@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> WS1718 Motta</title>
+<script type ="text/javascript">
+function checkText(user){
+	if (document.getElementById('text').value ===""){
+
+
+		alert ("No user");
+		return false;}
+		else return true;
+	}
+function newUser(user)
+{
+if (user==="")
+	
+	{ userSpan.innerHTML=("user");
+     alert ("no user");
+     	return false;}
+else
+	{user=document.form.text.value;
+userSpan.innerHTML= user;
+
+return true;}}
+
+//This is because you forgot to use the instance variable .value after document.getElementById("text").
+
+
+</script>
+</head>
+<body>
+<form  name=form action="ws1718.html" onsubmit="return checkText(this)">
+Hello,<span id=userSpan>user</span><br>
+<Input type="text" id="text" onChange="newUser(this.value)"> 
+<br>
+<Input type="submit" id="submit" value="submit">
+</form> 
+
+</body>
+</html>

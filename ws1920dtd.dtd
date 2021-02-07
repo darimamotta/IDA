@@ -1,0 +1,33 @@
+<!ELEMENT band (leader, singer*,instrument+|leader,rhythm?)>
+<!ATTLIST band
+style CDATA   #IMPLIED;
+>
+<!ELEMENT leader (#PCDATA);>
+<!ELEMENT singer (#PCDATA);>
+<!ATTLIST instrument 
+type CDATA  #REQUIRED;
+count NMTOKEN  #IMPLIED;
+>
+<!ELEMENT rhythm
+type CDATA   #REQUIRED;
+>
+
+Write a DTD against which the following band documents successfully validate. (Employ all operators of the content model.) If the attribute count is not specified, it is given
+the value 1.
+b) Draw the complete document tree of the second band document.
+c) Assume that the band leader should not be described as a nested element, but as an attribute of the band element. What is the resulting start tag of the root element of the first
+band document?
+<band style=”swing”>
+ <leader>Chick</leader>
+ <singer>Ella</singer>
+ <instrument type=”saxophone” count=”4” />
+ <instrument type=”drums” />
+ <instrument type=”piano” />
+</band>
+<band>
+ <leader>Count</leader>
+ <rhythm>
+ <instrument type=”drums” />
+ <instrument type=”bass” />
+ </rhythm>
+</band>

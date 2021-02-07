@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+	function checkF(){
+		if (document.getElementById('text').value==""){
+		alert ("no such value");
+			return false;
+		
+		}
+		else 
+			
+		     return true;
+		    
+	}
+
+function chgB(){	
+	let but=document.getElementById('mysub');
+	if (document.getElementById('text').value!==""){
+		but.value="send";
+	return true;
+	}
+	else {
+
+		but.value="complete form";
+		return false;
+	}
+}
+
+</script>
+	<form method="get" action="1516p.html" onsubmit="return checkF()">
+		<input type="text" id="text" onblur="chgB()" ><br>
+		<input type="submit" id="mysub" value="complete form">
+	</form>
+
+</body>
+</html>
+
