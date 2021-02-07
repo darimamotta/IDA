@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ss19</title>
+	<script type=text/javascript>
+
+		function changeClr(){
+			let newclr=document.getElementById('text').value;
+			if (newclr!=''){
+				myspan.innerHTML=newclr;
+				mypar.style.border="3px solid";
+
+				mypar.style.borderColor=newclr;
+			}
+			else {
+				myspan.innerHTML="no";
+				mypar.style.border="none";
+			}
+		}
+	</script>
+
+	</head>
+	<body>
+		<p id="mypar">I have <span id=myspan>no</span> border.</p><br>
+		<Input type="text" id="text" onchange="changeClr()">
+	</body>
+</html>

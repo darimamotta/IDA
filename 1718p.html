@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>1718 motta practice</title>
+<script type=text/javascript>
+
+	function checkForm(){
+let user=document.getElementById('text').value;
+if (user=="") {
+	alert ("pls type username");
+	return false
+} else return true;
+	}
+
+	function changeUser(){
+		let user=document.getElementById('text').value;
+		{if (user!='') {
+
+		myspan.innerHTML=user;}
+		else myspan.innerHTML="user";
+
+	}}
+	</script>
+
+</head>
+<body>
+
+<form action="1718p.html" method="get" onsubmit="return checkForm()">
+<h1>Hello,<span id="myspan"> user</span></h1> <br>
+<input type="text" id="text" onchange="changeUser()"><br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>

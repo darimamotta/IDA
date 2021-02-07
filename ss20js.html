@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ss20pr motta</title>
+<script type="text/javascript">
+	function checkForm(){
+	if (document.getElementById("text").value=="") 
+		{alert ("No size");
+         return false;}
+         else return true;}
+	function changeSize(newsize)
+{	document.getElementById("text").value=newsize; }
+
+	</script>
+</head><body><form action="ss20js.html" method="get" onsubmit="return checkForm()">
+Order one <Input type="text" id="text">pizza<br>
+Select <span onclick="changeSize(this.innerHTML)"> small</span> or <span onclick="changeSize(this.innerHTML)"> large</span><br>
+<input type="submit" name="submit">
+</form>
+
+
+</body>
+</html>

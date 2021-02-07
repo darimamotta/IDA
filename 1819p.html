@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> WS1819 Motta</title>
+<script type ="text/javascript">
+
+	
+function newText(des){
+
+if (des.value=="stay")
+
+	{	myspan.innerHTML=("It will be double");}
+		
+
+else if (des.value=="go")
+	
+	{ myspan.innerHTML=("There will be trouble");}
+}
+function atLeastOne(){
+	
+	if ((document.getElementById('go').checked==false)&&(document.getElementById('stay').checked==false))
+		{		
+	    alert ("push button");
+	    return false;}
+	    else return true;
+	 }
+	  
+
+
+//The onsubmit event is never triggered, because you're using type="button" for the submit button. Also, document.getElementByName() is not a valid function. You also have no parameter in your function header. I suggest to use something like myform as a parameter (you already pass the form when calling atLeastOne()), and the myform.choice[0].checked will work.
+</script>
+</head>
+<body>
+
+<form  name=form action="1819p.html" method="post" onsubmit="return atLeastOne()">
+<p><span id="myspan"> Should I stay or should I go?</span></p>
+<input type="radio" name="choice" id="go" value="go" onClick="newText(this)">Go
+<br>
+<input type="radio" name="choice" id="stay" value="stay" onClick="newText(this)">Stay
+<br>
+<input type="submit" name="submit" value="submit">
+
+</form> 
+
+</body>
+</html>

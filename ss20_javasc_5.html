@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> ss2020 havascript 5 Motta</title>
+<script type ="text/javascript">
+
+function checkText(currentForm){
+	if (currentForm.size.value === ""){
+		alert("No Size");
+		return false;
+	}
+
+	return true;
+	
+}
+
+
+function changeSize(newsize)
+{
+   let inputElement = document.querySelector("#text");
+   inputElement.value = newsize;
+}
+
+</script>
+</head>
+<body>
+<form method="post" action="http://offenburg.de" onsubmit="return checkText(this)">
+Order one
+<Input id="text" type="text" value="" name="size">
+pizza
+<br>
+Select
+<Input type="button" value="small" id="newsize1" onClick="changeSize(this.value)"> 
+or
+<Input type="button" value="large" id="newsize2" onClick="changeSize(this.value)"> 
+
+<br>
+<Input type="submit" value="submit">
+</form>
+</body>
+</html>

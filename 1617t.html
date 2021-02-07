@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type=text/javascript>
+function changeBtn(){
+		let btn11=document.getElementById('btn1').value;
+		let btn22= document.getElementById('btn2').value;
+		if (btn11=="click me"|btn22==""){
+		document.getElementById('btn1').value="";
+	    document.getElementById('btn2').value="Click me";
+	}   else if (btn11==""|btn22=="Click me")
+	{  document.getElementById('btn2').value="";
+	    document.getElementById('btn1').value="Click me";}
+
+	} 	
+</script>
+</head>
+<body>
+	<form method="get">
+<input type="button" name="btn1" value="Click me" id="btn1" onclick="changeBtn()">
+<input type="button" name="btn2" value="" id="btn2" onclick="changeBtn()">
+</form>
+</body>
+</html>

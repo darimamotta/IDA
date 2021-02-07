@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ss17</title>
+	<script type=text/javascript>
+		function mvBtn(){
+
+		let xnew=document.getElementById('x').value;
+		let ynew=document.getElementById('y').value;
+		if (xnew==''|ynew==''){
+			alert ("One or both coordinates missing.");
+			return false;
+		}
+		else if (xnew!=''&&ynew!=''){
+			mybutton.style.position="absolute";
+			mybutton.style.right=xnew+"px";
+		 mybutton.style.top=ynew+"px";
+		 return true;}
+		}
+
+	</script>
+	<body>
+		<form >
+			<label><input type="text" id="x" > X coordinates </label> <br>
+			<label><input type="text" id="y"> Y coordinates </label><br>
+			<input type="button" id="mybutton" value="move me" onclick="mvBtn()">
+		</form>
+	</body>
+</html>
+

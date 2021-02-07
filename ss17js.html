@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> ss17 Motta</title>
+<script type ="text/javascript">
+
+function moveButton(empty){
+	let x1=document.getElementById("x");
+	let y1=document.getElementById("y");
+	if (x1.value==""|y1.value=="")
+		  alert ("One or both coordinates missing.");
+
+	else {	
+		 	
+
+submit.style.position = "absolute";
+submit.style.top =y1.value+"px";
+submit.style.right =x1.value+"px";
+
+}
+
+
+                         }
+</script>
+</head>
+<body>
+
+
+<form action="ss17js.html" method="post"> <br>
+
+<label><input type="text" id="x" > x coordinate</label>
+<label><input type="text" id="y" > y coordinates</label>
+<br>
+<br>
+<Input type="button" id="submit" value="move me" onclick="moveButton(this)">
+
+</form> 
+
+</body>
+</html>
+
+

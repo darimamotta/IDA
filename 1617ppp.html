@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ 	<script type="text/javascript">
+ 		function chgBut(){
+ 			let btn11=document.getElementById('btn1').value;
+ 			let btn22=document.getElementById('btn2').value;
+ 			if (btn11=="click me"|btn22==""){
+ 				document.getElementById('btn1').value="";
+ 				document.getElementById('btn2').value="click me";
+ 			} 
+ 			else if(btn22=="click me"|btn11=="") {
+ 				document.getElementById('btn2').value="";
+ 				document.getElementById('btn1').value="click me";
+ 			}
+ 			}
+
+ 		
+ 	</script>
+ </head>
+ <body>
+ 	<form method="get">
+ 	 <input type="button" id="btn1" name="btn1" value="click me" onclick="chgBut()">
+ <input type="button" id="btn2" name="btn2" value="" onclick="chgBut()">
+</form>
+ </body>
+ </html>
+
+
